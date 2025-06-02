@@ -15,7 +15,10 @@ const BLACKLIST = [
 ];
 const MAX_LENGTH = 80;
 
-export async function addTodo(prevState: any, formData: FormData) {
+export async function addTodo(
+  prevState: { error?: string },
+  formData: FormData
+) {
   const task = formData.get("task")?.toString().trim();
   const image = formData.get("image")?.toString().trim() || null;
 
