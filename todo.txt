@@ -1,0 +1,32 @@
+mysql todo app in nextjs 
+	+ shadcn
+	+ all server components except button that show loading state with usage of useFormStatus
+
+
+id,
+task,
+checked,
+image (unsplash) (remove ?force=true)
+
+
+src/	
+	server-actions.ts 3
+	queries.ts 4
+	connect.ts
+	types.ts
+	helpers.ts
+
+	[] components	
+		[] ui
+		todoListItem.tsx
+	[] app
+		[] api
+			[] todos 1
+		[] todos
+
+
+extra: add field validation using useActionState !
+
+when input field was empty => red background + small red text below field "field cannot be empty"
+when input contains a word that is blacklisted => red background + small red text below field "dirty words are not permitted"
+when field text is too long => red background + small red text below field "please use a maximum of xxx. you used (xxx)"
