@@ -5,7 +5,7 @@ import { addTodo } from "@/server-actions";
 import { Input } from "./ui/input";
 import { SubmitButton } from "./ui/submit-button";
 
-const initialState = { error: null };
+const initialState: { error?: string } = {};
 
 export function AddTodoForm() {
   const [state, formAction] = useActionState(addTodo, initialState);
